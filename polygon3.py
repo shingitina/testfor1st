@@ -1,4 +1,4 @@
-import pygame
+import pygame, os
 
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -6,7 +6,9 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 WHITE = (255, 255, 255)
 
+os.putenv('SDL_FBDEV', '/dev/fb1')
 pygame.init()
+pygame.mouse.set_visible(False)
 screen = pygame.display.set_mode((128, 128))
 myclock = pygame.time.Clock()
 screen.fill(BLACK)
