@@ -9,10 +9,10 @@ from pygame.locals import *
 
 FULLSCREEN = False  # True にするとフルスクリーン表示
 #FPS = 60  # 秒間描画枚数
-FPS = 5  # 秒間描画枚数
+FPS = 1  # 秒間描画枚数
 WIDTH, HEIGHT = 128, 128  # 表示する画面のサイズ
 #LINEWIDTH = 10  # 線の太さ
-LINEWIDTH = 20  # 線の太さ
+LINEWIDTH = 10  # 線の太さ
 #COLOR = 0, 255, 200  # 色
 #BG_COLOR = 0, 0, 50  # 背景色
 BG_COLOR = 0, 0, 0  # 背景色
@@ -29,8 +29,8 @@ def main():
     start_time = pygame.time.get_ticks()
     screen.fill(BG_COLOR)
     pos_prev = (
-        random.randint(-WIDTH // 10 , int(WIDTH * 1.1)),
-        random.randint(-HEIGHT // 10, int(HEIGHT * 1.1)))
+        random.randint(-2, WIDTH + 2),
+        random.randint(-2, HEIGHT + 2))
     while True:
         timer.tick(FPS)
         if random.randint(0, 100) == 2:
@@ -40,10 +40,10 @@ def main():
           , random.randint(0, 255)
           , random.randint(0, 255))
 
-        line_width = random.randint(1, LINEWIDTH)
+        line_width = random.randint(2, LINEWIDTH)
         pos_new = (
-            random.randint(-WIDTH // 10 , int(WIDTH * 1.1)),
-            random.randint(-HEIGHT // 10, int(HEIGHT * 1.1)))
+            random.randint(-2, WIDTH + 2),
+            random.randint(-2, HEIGHT + 2))
         pygame.draw.line(
 #            screen, COLOR,
             screen, color_rand,
