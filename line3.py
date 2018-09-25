@@ -4,6 +4,7 @@
 from __future__ import division
 import random
 import pygame
+import os
 from pygame.locals import *
 
 FULLSCREEN = False  # True にするとフルスクリーン表示
