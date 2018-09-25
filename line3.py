@@ -67,7 +67,10 @@ def main():
             return
 
 if __name__=='__main__':
+    os.putenv('SDL_FBDEV', '/dev/fb1')
     pygame.init()
+    pygame.mouse.set_visible(False)
+    screen = pygame.display.set_mode((128, 128))
     try:
         main()
     finally:
