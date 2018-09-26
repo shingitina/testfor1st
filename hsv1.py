@@ -45,7 +45,8 @@ def pygame_main():
     s, v = 0, 0
     while True:
         screen.fill(BLACK)
-        triangle = [(20, 110), (63, 40), (106, 110)]
+#        triangle = [(20, 110), (63, 40), (106, 110)]
+        triangle = [(20, 70), (40, 40), (60, 70)]
         for hue in range(360):
 #        for idx in range(len(colors)):
             color_rgb = hsv2rgb(hue, s, v)
