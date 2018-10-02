@@ -12,7 +12,9 @@ SCR_RECT = Rect(0, 0, 128, 128) # screen size by px
 #IMG_FILE = "mig2.jpg"
 #IMG_FILE = "73475789.png"
 #IMG_FILE = "star1.png"
-IMG_FILE = "moment_in_space_by_adriencgd.png"
+#IMG_FILE = "moment_in_space_by_adriencgd.png"
+#IMG_FILE = ""
+IMG_FILE = "p11176.png"
 
 class TestSprite:
     def __init__(self):
