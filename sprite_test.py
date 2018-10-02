@@ -9,8 +9,8 @@ SCR_RECT = Rect(0, 0, 128, 128) # screen size by px
 #IMG_FILE = "enterprize.jpg"
 #IMG_FILE = "20101201_il01_035.jpg"
 #IMG_FILE = "aurora001.jpg"
-IMG_FILE = "mig2.jpg"
-#IMG_FILE = "73475789.png"
+#IMG_FILE = "mig2.jpg"
+IMG_FILE = "73475789.png"
 
 class TestSprite:
     def __init__(self):
