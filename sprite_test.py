@@ -6,6 +6,7 @@ from PIL import Image
 SCR_RECT = Rect(0, 0, 128, 128) # screen size by px
 #コメント(utf-8)
 
+CLOCK_TICK = 10
 #IMG_FILE = "enterprize.jpg"
 #IMG_FILE = "20101201_il01_035.jpg"
 #IMG_FILE = "aurora001.jpg"
@@ -13,8 +14,8 @@ SCR_RECT = Rect(0, 0, 128, 128) # screen size by px
 #IMG_FILE = "73475789.png"
 #IMG_FILE = "star1.png"
 #IMG_FILE = "moment_in_space_by_adriencgd.png"
-#IMG_FILE = ""
 IMG_FILE = "p11176.png"
+#IMG_FILE = ""
 
 class TestSprite:
     def __init__(self):
@@ -27,7 +28,7 @@ class TestSprite:
         self.init_game(width, height)
         clock = pygame.time.Clock()
         while True:
-            clock.tick(60)
+            clock.tick(CLOCK_TICK)
             self.update()
             self.draw(screen)
             pygame.display.update()
