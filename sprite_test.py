@@ -12,9 +12,9 @@ CLOCK_TICK = 10
 #IMG_FILE = "aurora001.jpg"
 #IMG_FILE = "mig2.jpg"
 #IMG_FILE = "73475789.png"
-#IMG_FILE = "star1.png"
+IMG_FILE = "star1.png"
 #IMG_FILE = "moment_in_space_by_adriencgd.png"
-IMG_FILE = "p11176.png"
+#IMG_FILE = "p11176.png"
 #IMG_FILE = ""
 
 class TestSprite:
