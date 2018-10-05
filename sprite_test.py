@@ -18,6 +18,7 @@ CLOCK_TICK = 20
 #IMG_FILE = "color20170618a.png"
 #IMG_FILE = "auroraJupit.png"
 IMG_FILE = "pillow_concat_h.jpg"
+#IMG_FILE = "injection8.png"
 #IMG_FILE = ""
 
 class TestSprite:
