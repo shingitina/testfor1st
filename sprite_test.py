@@ -102,12 +102,7 @@ class TestSprite:
 
 class Player(pygame.sprite.Sprite):
 #    speed = 3 # moving speed
-    speed = 1 # moving speed
-#    BEGIN_LEFT=-303
-#    POS_BEGIN_LEFT=-303
-#    POS_END_LIMIT=-303
-#    IMG_WIDTH = 303
-#    limit = IMG_WIDTH + 128
+    move_step = -1 # moving step
 
     def __init__(self, width, height):
         self.width  = width
@@ -115,18 +110,17 @@ class Player(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
         self.rect.bottom = SCR_RECT.bottom
-#        self.rect.left = 400
-#        self.rect.left = -128
 #        self.rect.left = -self.IMG_WIDTH
-        self.rect.left = -self.width
+#        self.rect.left = self.width
+        self.rect.left = 128
         self.limit = self.width + 128
 
     def update(self):
-        self.rect.move_ip(self.speed, 0)
+        self.rect.move_ip(self.move_step, 0)
         if self.limit == 0:
 #            self.rect = self.rect.clamp(SCR_RECT)
-#            self.rect.left = -128
-            self.rect.left = -self.width
+#            self.rect.left = self.width
+            self.rect.left = 128
             self.limit = self.width  + 128
         else:
             self.limit -= 1
