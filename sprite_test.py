@@ -110,7 +110,6 @@ class Player(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
         self.rect.bottom = SCR_RECT.bottom
-#        self.rect.left = -self.IMG_WIDTH
 #        self.rect.left = self.width
         self.rect.left = 128
         self.limit = self.width + 128
@@ -126,4 +125,11 @@ class Player(pygame.sprite.Sprite):
             self.limit -= 1
 
 if __name__ == '__main__':
+    if os.path.exists('/var/run/'):
+        pid = os.fork()
+        if pid > 0:
+            fs_pid = open('/var/run/sprite_test.pid','w')
+            fs_pid.write(str(pid)+"\n")
+            fs_pid.close()
+            sys.exit()
     TestSprite()
