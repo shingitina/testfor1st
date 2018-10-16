@@ -125,7 +125,7 @@ class Player(pygame.sprite.Sprite):
             self.limit -= 1
 
 if __name__ == '__main__':
-    time.sleep(120)
+    time.sleep(1)
     if os.path.exists('/var/run/'):
         pid = os.fork()
         if pid > 0:
