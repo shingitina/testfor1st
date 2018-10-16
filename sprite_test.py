@@ -1,6 +1,6 @@
 import pygame, math
 from pygame.locals import *
-import random, sys, os, re
+import random, sys, os, re, time
 from PIL import Image
 
 SCR_RECT = Rect(0, 0, 128, 128) # screen size by px
@@ -125,6 +125,7 @@ class Player(pygame.sprite.Sprite):
             self.limit -= 1
 
 if __name__ == '__main__':
+    time.sleep(120)
     if os.path.exists('/var/run/'):
         pid = os.fork()
         if pid > 0:
